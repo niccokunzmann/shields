@@ -48,6 +48,10 @@ This information allows other humans to help and build on your work.
 
 ### (4.1) Structure and Layout
 
+> **TODO**: This section is boring and not hands-on.
+> It is more a reference or documentation but not all necessary to
+> understand before code is written.
+
 Service badge code is stored in the [/services] directory.
 Each service has an own directory for its files.
 - In files ending in with `.service.js`, you can find the code which generates
