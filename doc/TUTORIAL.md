@@ -86,6 +86,14 @@ Other classes already implement useful behavior on top of [BaseService].
 As a first step we will look at the code for an example which generates a badge
 without contacting an API.
 
+> **TODO**: The following code will be the code people copy the most.
+> If should contain the structure we want them to use:
+> - static badges generation
+> - rendering re-use
+> - everything except the call to the API request
+> - We can copy & paste the code from there on and only add some
+>   methods for JSON/raw
+
 ```js
 'use strict'                                         // (1)
 
