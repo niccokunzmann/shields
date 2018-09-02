@@ -48,16 +48,25 @@ This information allows other humans to help and build on your work.
 
 ### (4.1) Structure and Layout
 
-Service badge code is stored in the `/services` directory in files ending in with `.service.js`
+Service badge code is stored in the [/services] directory.
+Each service has an own directory for its files.
+- In files ending in with `.service.js`, you can find the code which generates
+  the badge and handles requests.
+- In the files ending with `.tester.js`, you can find the code which uses
+  the shields server to test if the badges are generated correctly.
 
-For services with a single badge, the badge code will generally be stored in
-`/services/servicename/servicename.service.js` e.g: [wercker](https://github.com/badges/shields/tree/master/services/wercker)
+Sometimes, code for a service can be re-used.
+This might be the case when you add a badge for an API which is already used
+by other badges.
+- For services with a single badge, the badge code will generally be stored in
+  `/services/servicename/servicename.service.js` e.g: [wercker]
 
-For service families with multiple badges we usually store the code for each badge in its own file e.g:
-* `/services/servicename/servicename-downloads.service.js`
-* `/services/servicename/servicename-version.service.js` etc
-
-e.g: [ruby gems](https://github.com/badges/shields/tree/master/services/gem)
+- For service families with multiple badges we usually store the code for each
+  badge in its own file like this:
+  - `/services/servicename/servicename-downloads.service.js`
+  - `/services/servicename/servicename-version.service.js` etc
+  
+  Examlple: [ruby gems]
 
 [Tests](TUTORIAL.md#45-write-tests) for badge code are stored alongside the badge code in corresponding files ending with `.tester.js`.
 
@@ -266,3 +275,9 @@ Once you have implemented a new badge:
 will review your contribution.
 * We'll work with you to progress your contribution suggesting improvements if necessary. Although there are some occasions where a contribution is not appropriate, if your contribution conforms to our [guidelines](https://github.com/badges/shields/blob/master/CONTRIBUTING.md#badge-guidelines) we'll aim to work towards merging it. The majority of pull requests adding a service badge are merged.
 * If your contribution is merged, the final comment on the pull request will be an automated post which you can monitor to tell when your contribution has been deployed to production.
+
+[/services]: ../services
+[wercker]: ../services/wercker
+[ruby gems]: ../services/gem
+
+
