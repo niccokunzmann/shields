@@ -74,11 +74,17 @@ Each service has an own directory for its files.
 
 Please replace `SERVICENAME` with your service name in the following.
 
-### (4.2) Our First Badge
+### (4.2) Your First Badge
 
-All service badge classes inherit from `BaseService` or another class whichitself extends `BaseService` e.g: `BaseJsonService`.
+All service badge classes inherit from [BaseService].
+Other classes already implement useful behavior on top of [BaseService].
+- [BaseJsonService] implements requests to JSON APIs,
+  schema validation of the data and getting attributes from a JSON path.
+- If you are contributing to a *service family*, you may have a common super
+  class for the badges.
 
-As a first step we will look at the code for an example which generates a badge without contacting an API.
+As a first step we will look at the code for an example which generates a badge
+without contacting an API.
 
 ```js
 'use strict'                                         // (1)
@@ -282,5 +288,6 @@ will review your contribution.
 [/services]: ../services
 [wercker]: ../services/wercker
 [ruby gems]: ../services/gem
-
+[BaseService]: ../services/base.js
+[BaseJsonService]: ../services/base-json.js
 
