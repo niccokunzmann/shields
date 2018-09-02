@@ -60,13 +60,12 @@ This might be the case when you add a badge for an API which is already used
 by other badges.
 - For services with a single badge, the badge code will generally be stored in
   `/services/servicename/servicename.service.js` e.g: [wercker]
-
 - For service families with multiple badges we usually store the code for each
   badge in its own file like this:
   - `/services/servicename/servicename-downloads.service.js`
   - `/services/servicename/servicename-version.service.js` etc
   
-  Examlple: [ruby gems]
+  Example: [ruby gems]
 
 [Tests](TUTORIAL.md#45-write-tests) for badge code are stored alongside the badge code in corresponding files ending with `.tester.js`.
 
